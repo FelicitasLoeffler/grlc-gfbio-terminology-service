@@ -1,0 +1,8 @@
+#+ summary: get all child concepts of bees (scientific name: Apis)
+#+ endpoint: https://terminologies.gfbio.org/sparql/
+#+ method: GET
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?inst 
+WHERE{  
+         ?inst rdfs:subClassOf* <http://purl.obolibrary.org/obo/NCBITaxon_7459>       
+}
